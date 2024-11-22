@@ -23,17 +23,15 @@ def perform_operation(operation):
     except ZeroDivisionError:
         messagebox.showerror("Math Error", "Cannot divide by zero!")
 
-# Initialize main window
 root = tk.Tk()
 root.title("Simple Calculator - Bscys039")  # Replace "Your Roll Number" with the actual roll number
 root.geometry("400x400")
 root.config(bg="#e3f2fd")
 
-# Title label
+
 title_label = tk.Label(root, text="Simple Calculator by wajid ali", font=("Arial", 16, "bold"), bg="red", fg="#333")
 title_label.pack(pady=10)
 
-# Input fields
 entry_frame = tk.Frame(root, bg="red")
 entry_frame.pack(pady=20)
 
@@ -47,7 +45,7 @@ entry2_label.grid(row=1, column=0, padx=10, pady=5)
 entry2 = tk.Entry(entry_frame, font=("Arial", 12), width=15)
 entry2.grid(row=1, column=1, padx=10, pady=5)
 
-# Buttons
+
 button_frame = tk.Frame(root, bg="#e3f2fd")
 button_frame.pack(pady=20)
 
@@ -67,9 +65,8 @@ divide_button = tk.Button(button_frame, text="Divide", font=("Arial", 12), bg="#
                            command=lambda: perform_operation("divide"))
 divide_button.grid(row=1, column=1, padx=10, pady=10)
 
-# Result label
+
 result_label = tk.Label(root, text="Result: ", font=("Arial", 14), bg="#e3f2fd", fg="#333")
 result_label.pack(pady=20)
 
-# Run the application
 root.mainloop()
